@@ -4,9 +4,9 @@ This blog uses Carte Noire, a simple Jekyll theme for blogging. Not named after 
 bundle exec jekyll serve --watch --baseurl "" --trace
 ```
 - [ ] footer centeril akkanam  
-- [-] profile pic   
+- [x] profile pic   
 - [ ] posts venam  
-- [ ] article tags  
+- [x] article tags  
 
 
 ```

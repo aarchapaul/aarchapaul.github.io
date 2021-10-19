@@ -1,0 +1,30 @@
+I"<p>A downloadable task file is given with this challenge. It contains an image as shown below. <img src="/assets/WindowsXP.jpg" alt="WindowsXP.jpg" />
+On running exiftool, we find the name of a person <code class="language-plaintext highlighter-rouge">OWoodflint</code>.
+<img src="/assets/ohsint-exiftool.png" alt="exiftool" />
+A quick google search gives us a twitter account, where the person has shared a BSSID.</p>
+<blockquote>
+  <p>From my house I can get free wifi ;D<br />
+Bssid: B4:5D:50:AA:86:41 - Go nuts!</p>
+</blockquote>
+
+<p>On going to wigle.net/ and typing the BSSID into advanced search, we get the person’s location and SSID.</p>
+
+<p>Going back to google search of OWoodflint, we get the github account and a wordpress blog. In github we get his email ID. From the blog we get his holiday location and password.</p>
+
+<ol>
+  <li>What is this users avatar of?<br />
+ cat</li>
+  <li>What city is this person in?<br />
+ London</li>
+  <li>Whats the SSID of the WAP he connected to?<br />
+ UnileverWiFi</li>
+  <li>What is his personal email address?<br />
+ OWoodflint@gmail.com</li>
+  <li>What site did you find his email address on?<br />
+ Github</li>
+  <li>Where has he gone on holiday?<br />
+ New York</li>
+  <li>What is this persons password?<br />
+ pennYDr0pper.!</li>
+</ol>
+:ET
