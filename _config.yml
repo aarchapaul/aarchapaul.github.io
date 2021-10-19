@@ -5,7 +5,7 @@ description: "A dark blog theme for Jekyll."
 baseurl: ""
 url: "http://carte-noire.jacobtomlinson.co.uk/"
 title_description: "Hi, I am Aarcha Paul. Welcome to my personal blog. This is where I share my CEH learning journey and post CTF writeups."
-title_image: "https://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
+title_image: "https://avatars.githubusercontent.com/u/40428184?v=4"
 google_analytics: "UA-20365477-4"
 disqus_account: cartenoire
 github_repository: https://github.com/aarchapaul
