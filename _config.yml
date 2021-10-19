@@ -1,10 +1,10 @@
 # Site settings
 title: "Aarcha's Blog"
 email: aarchapaul194@gmail.com
-description: #"A dark blog theme for Jekyll."
+description: "A dark blog theme for Jekyll."
 baseurl: ""
 url: "http://carte-noire.jacobtomlinson.co.uk/"
-title_description: "Welcome to my personal blog. This is where I share my CEH/OSCP learning journey and post CTF writeups."
+title_description: "Hi, I am Aarcha Paul. Welcome to my personal blog. This is where I share my CEH learning journey and post CTF writeups."
 title_image: "https://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
 google_analytics: "UA-20365477-4"
 disqus_account: cartenoire

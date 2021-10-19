@@ -716,10 +716,6 @@ ul {
 		.feedback {
 			text-align: center;
 
-			.fa-heart {
-				color: $red;
-			}
-
 		}
 
 		.comments {
@@ -821,10 +817,7 @@ ul {
 .footer {
 	width: 100%;
 	margin-left: 0%;
-
-	.fa-heart {
-		color: $red;
-	}
+	
 
 	@media (min-width: $screen-sm-min) {
 		width: 90%;
