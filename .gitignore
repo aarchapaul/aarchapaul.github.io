@@ -23,6 +23,8 @@ Temporary Items
 
 # Jekyll Specific
 _site/
+Templates/
+.obsidian/
 
 # Ruby
 Gemfile.lock
