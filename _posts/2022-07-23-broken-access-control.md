@@ -4,15 +4,15 @@ title: Broken Access Control
 date: 2022-07-23 20:26:17
 author: Aarcha Paul
 summary: A quick introduction to Broken Access Control vulnerability
-categories: TryHackMe
+categories: 
 thumbnail: jekyll
 tags:
- - enumeration
+ - enumeration 
  - reconnaisance 
- - vuln 
  - OWASP top 10 
 ---
 # Broken Access Control
+
 Broken Access Control has become the most common web application vulnerability according to OWASP Top 10 list in 2021. Hence it is important to not only understand this type of vulnerability but also how to prevent it.
 
 Access control involves a website granting some users access to content and function. It requires defining who can view and/or modify data or configurations within a system or application. The first step in implementing access control is defining a policy for the particular system or application. We need to understand who/what should and shouldn’t have access to view or edit an object. Once the policy is created and we know who should have access to a system and, more importantly, what level of access they should have, we next need to design the implementation.
