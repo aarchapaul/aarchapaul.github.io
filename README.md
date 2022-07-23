@@ -10,6 +10,6 @@ bundle exec jekyll serve --watch --baseurl "" --trace
 
 ```
 git add .
-git commit -m ""
+git commit -m "added post post-name"
 git push
 ```
