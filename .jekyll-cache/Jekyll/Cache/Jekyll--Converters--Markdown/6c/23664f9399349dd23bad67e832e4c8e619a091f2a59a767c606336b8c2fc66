@@ -1,0 +1,30 @@
+I"�<h1 id="hackers-guide-on-cross-site-scripting-xss-vulnerability">Hacker’s guide on Cross Site Scripting (XSS) vulnerability</h1>
+
+<p>XSS stands for <strong>Cross site scripting</strong> . It is a vulnerability that allows attackers to inject client-side scripts like JavaScript and run it on web pages. When the end user loads these pages, the malicious scripts will be executed and attackers can steal session tokens and cookies, change the content of the web page through DOM manipulation or even redirect the browser.</p>
+
+<p>Attackers usually try to run JavaScript code on input boxes and parameters on forms in vulnerable websites. These input fields, if not secured properly, will execute code.</p>
+
+<h2 id="types-of-xss">Types of XSS</h2>
+<ol>
+  <li><strong>Stored / Persistent XSS attack:</strong> The script gets stored on server or database and is executed every time the page is loaded. With this type of attack, all the people who see the infected publication, message or any element, become victims of the attack.</li>
+  <li><strong>DOM based XSS attack:</strong> This type of attack occurs entirely on client side. The attack works through manipulating the internal model of the web page within the browser, known as the DOM (Document Object Model). These attacks begin at a <strong>source</strong> and ends at a <strong>sink</strong>. The locations that attacker input bring into the DOM are designated as source and the locations in which attacker input can be executed in the DOM are designated as sink. This vulnerability usually occurs when JavaScript takes data from an attacker-controllable source (e.g. URL) and passes it to a sink that supports dynamic code execution, such as <code class="language-plaintext highlighter-rouge">eval()</code> or <code class="language-plaintext highlighter-rouge">innerHTML</code>. This enables attackers to execute malicious JavaScript, which typically allows them to hijack other users’ accounts.</li>
+  <li><strong>Reflected XSS attack:</strong> It is the simplest type of XSS. It occurs when an website receives data in an HTTP request and includes that data within the immediate response without any other processing. For example, In the vulnerable target site, the URL <code class="language-plaintext highlighter-rouge">http://target-site.com/page.php?something=&lt;script&gt;alert("XSS")&lt;/script&gt;</code> will display an dialog box containing the message <strong>alert(“XSS”)</strong>.</li>
+</ol>
+
+<h2 id="mitigation">Mitigation</h2>
+<ol>
+  <li>Always keep your browsers updated to prevent any zero-day attacks.</li>
+  <li>Sanitize input from client-side and follow secure coding practises. Some methods are by encoding inputs and special characters (&lt;, &gt;, ‘ and “), filtering  <code class="language-plaintext highlighter-rouge">&lt;script&gt;&lt;/script&gt;</code> tags, and using XSS prevention libraries (e.g. AntiXSS, xssprotect).</li>
+  <li>Minimize user input on website as much as possible.</li>
+  <li>Prevent cookies from being shown in cleartext (set the HttpsOnly flag in header).</li>
+</ol>
+
+<h2 id="resources-to-practise">Resources to practise</h2>
+<ul>
+  <li><a href="http://xss-game.appspot.com/">XSS Game</a> is a multi-level CTF focusing entirely on cross-site scripting (XSS) attacks.</li>
+  <li>Practise on <a href="https://portswigger.net/web-security/all-labs#cross-site-scripting">Portswigger Web Security Academy</a></li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Cross-site scripting is the third most common vulnerability affecting websites and applications. OWASP lists more than 80 vectors that can be targeted using Cross Site Scripting. So understanding how this attack works is essential to every hacker.</p>
+:ET

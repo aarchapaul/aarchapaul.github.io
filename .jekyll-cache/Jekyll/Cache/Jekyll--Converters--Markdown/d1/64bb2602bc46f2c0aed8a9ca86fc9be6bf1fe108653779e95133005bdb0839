@@ -1,0 +1,221 @@
+I"hL<p>This room can be found at: https://tryhackme.com/room</p>
+
+<h2 id="-task-1--introduction">## Task 1 – Introduction</h2>
+
+<p>This room is the second in the three part ‘Linux Fundamentals’ series. The first part is considered a prerequisite, so go back and complete that one if you haven’t yet – it goes through a bunch of the most important commands and operators.<br />
+In this room, we’ll see flags and operators, learn permissions, and increase our aptitude with Linux filesystem management.<br />
+<strong>Question 1:</strong> Let’s proceed!</p>
+
+<p><strong>Answer:</strong> No answer needed</p>
+
+<h2 id="-task-2--accessing-your-linux-machine-using-ssh">## Task 2 – Accessing Your Linux Machine Using SSH</h2>
+
+<p>This Task is super exciting, as we’ll be using a remote computer securely using a popular protocol known as SSH.</p>
+
+<p>SSH, or secure shell, allows us to login and access a command line on a remote computer. It uses cryptography to secure the connection; this means that if our data is intercepted, it would still be protected by encryption. Data is encrypted before it is sent and then decrypted by the remote machine.</p>
+
+<p>To complete this task, we need to deploy two machines at the same time:</p>
+
+<ol>
+  <li>The ‘linuxfundpt2’ machine is deployed using the green ‘Start Machine’ button at the top of ## Task 2.</li>
+  <li>The AttackBox is deployed using the blue ‘Start Attackbox’ button at the top of the page.</li>
+</ol>
+
+<p>You will need to wait a minute for each one to load.</p>
+
+<p>AttackBox is a fully featured Ubuntu Linux virtual machine (VM), which we’ll use in almost every Room involving Linux going forward. Once the AttackBox is loaded, use the icon on the desktop to access the terminal.</p>
+
+<p>Next, we’ll use SSH to log in to our ‘linuxfundpt2’ machine. In the AttackBox terminal, type:
+<code class="language-plaintext highlighter-rouge">ssh tryhackme@&lt;IP address&gt;</code></p>
+
+<p><strong>Question 1:</strong> I’ve logged into the Linux Fundamentals Part 2 machine using SSH!
+<strong>Answer:</strong> No answer needed</p>
+
+<h2 id="-task-3--introduction-to-flags-and-switches">## Task 3 – Introduction to Flags and Switches</h2>
+
+<p>Most Linux commands have options, and we use code called flags or switches to access those options.</p>
+
+<p>For example, if we use the ls command, we will be given a list of files and folders in the current working directory. If we add the -a flag to the command, i.e.:
+<code class="language-plaintext highlighter-rouge">ls -a</code></p>
+
+<p>We will now see the hidden files and folders as well as the non-hidden ones. Hidden files and folders are marked with a dot ‘.’ before their name.</p>
+
+<p>It would be tough to memorize every option for every command, so Linux helps us out by allowing us to view help or manual pages for commands.</p>
+
+<p>These can be accessed in two ways: the –help flag or the man command.</p>
+
+<h3 id="the-man-command">The man command</h3>
+
+<p>We can use the man command, followed by the command that we want to learn about, to access that command’s manual page.</p>
+
+<p>The manual page typically includes a description of the command, the general syntax of using the command, and a comprehensive list of options and the flags for those options. All you have to do is type in ‘man <command />’. For example, to see the manual page for the ls command, we would type <code class="language-plaintext highlighter-rouge">man ls</code>. You can even access the manual page for the man command by typing in <code class="language-plaintext highlighter-rouge">man man</code>.</p>
+
+<p><strong>The –help flag</strong>
+Many commands will allow you to access a help screen by using the ‘–help’ flag. This option tends to be less comprehensive than the man page, but should give you all of the flag options for that command. To use the –help flag for the ls command, you would type <code class="language-plaintext highlighter-rouge">ls –help</code>.</p>
+
+<p><strong>Question 1:</strong> Explore the manual page of the ls command
+<strong>Walkthrough:</strong> Type ‘man ls’ and start getting familiar with the layout of man pages.
+<strong>Answer:</strong> No answer needed</p>
+
+<p><strong>Question 2:</strong> What directional arrow key would we use to navigate down the manual page?
+<strong>Walkthrough:</strong> Try it out; there are only four directional arrows so only one will be correct. You can also scroll through manual pages. Extensive details for how to use manual pages can be found by using the ‘man man’ command.
+<strong>Answer:</strong>  down</p>
+
+<p><strong>Question 3:</strong> What flag would we use to display the output in a “human-readable” way?
+<strong>Walkthrough:</strong> This question assumes that we are still in the ls manual page (‘man ls’). As we scroll down the manual page for ls, you’ll notice that a large part of the manual page is the DESCRIPTION section, which lists all of the available options by their flags, in alphabetical order. Scroll down through the manual page until you find the flag that corresponds with human readable output. What is this flag?
+<strong>Answer:</strong> <code class="language-plaintext highlighter-rouge">-h</code></p>
+
+<h2 id="-task-4--filesystem-interaction-continued">## Task 4 – Filesystem Interaction Continued</h2>
+
+<p>In ‘Linux Fundamentals Part 1’, we saw a number of commands to help us interact with the Linux filesystem. These commands were: ls, cd, cat, pwd, find, and grep. We’ll continue to build on this with a bunch of new commands: touch, mkdir, cp, mv, rm, and file.</p>
+
+<ul>
+  <li>touch – creates a blank file</li>
+  <li>mkdir – creates a directory</li>
+  <li>cp – copies a file or directory (use the flag -r to copy a directory)</li>
+  <li>mv – moves a file or directory</li>
+  <li>rm – deletes a file or directory</li>
+  <li>file – determines file type</li>
+</ul>
+
+<p><strong>Question 1:</strong> How would you create the file named “newnote”?
+<strong>Walkthrough:</strong> We use the command to create a new file, ‘touch’ combined with the name of the new file we want to create. If we wanted to create a file called ‘mynewfile’, we could use the command: <code class="language-plaintext highlighter-rouge">touch mynewfile</code>
+<strong>Answer:</strong>  <code class="language-plaintext highlighter-rouge">touch newnote</code></p>
+
+<p><strong>Question 2:</strong> On the deployable machine, what is the file type of “unknown1” in “tryhackme’s” home directory?
+<strong>Walkthrough:</strong> To complete this question, we must be logged in to the ‘linuxfundpt2’ machine as ‘tryhackme’. If you’re no longer logged in, use the procedure from ## Task 2 to use ssh to log in. Also if you’re logged in to the ‘linufundpt2’ machine but have navigated away from the home directory, use ‘cd ~‘ to return to it. Remember you can also use the pwd command to determine where you are in the filesystem. First, use the ‘ls’ command to list the files in the home directory. You should see three files, one of which is ‘unknown1’. Next, we can use the ‘file‘ command to determine the file type of unknown1. If we wanted to find the file type of our fictional file ‘mynewfile’, we would use the command <code class="language-plaintext highlighter-rouge">file mynewfile</code>. Knowing this, how can we determine the file type of file ‘unknown1’?
+<strong>Answer:</strong> file unknown1</p>
+
+<p><strong>Question 3:</strong> How would we move the file “myfile” to the directory “myfolder”
+<strong>Walkthrough:</strong> If we use the command ‘ls’, we should see both the file ‘myfile’ as well as the directory ‘myfolder’. There are two ways to get ‘myfile’ into ‘myfolder’; we can either make a copy (using the ‘cp‘ command) or we move it (using the ‘mv‘ command). Since our instructions are to move the file, we should use the ‘mv‘ command. Let’s go back to our fictional example using ‘mynewfile’. If we wanted to move ‘mynewfile’ into ‘myfolder’, we would use the command <code class="language-plaintext highlighter-rouge">mv mynewfile myfolder</code>. Now it’s up to you to re-write this for ‘myfile’.
+<strong>Answer:</strong>  <code class="language-plaintext highlighter-rouge">mv myfile myfolder</code></p>
+
+<p><strong>Question 4:</strong> What are the contents of this file?
+<strong>Walkthrough:</strong> The contents of a file can be viewed using the ‘cat‘ command. Because ‘myfile’ is in the directory ‘myfolder’, there are several ways to get its contents using ‘cat’.
+You can either navigate into myfolder (using ‘cd’) or execute the command from the home directory by directing ‘cat’ to myfolder/myfile. From myfolder: <code class="language-plaintext highlighter-rouge">cat myfile</code>
+From the home directory: <code class="language-plaintext highlighter-rouge">cat myfolder/myfile</code>
+A third option is to use the &amp;&amp; operator to combine ‘cd’ with ‘cat’ from the home directory, i.e.: <code class="language-plaintext highlighter-rouge">cd myfolder &amp;&amp; cat myfile</code>. Any of these methods should give you the flag you need to answer the question.
+<strong>Answer:</strong>  <code class="language-plaintext highlighter-rouge">THM{FILESYSTEM}</code></p>
+
+<p><strong>Question 5:</strong> Continue to apply your knowledge and practice the commands from this task.
+<strong>Walkthrough:</strong> This question is a freebie. My recommendation is to combine the commands with the operators covered in Linux Fundamentals Pt. 1.
+<strong>Answer:</strong> No answer needed</p>
+
+<h2 id="task-5--permissions-101">Task 5 – Permissions 101</h2>
+
+<p>Different users and groups can have different permissions for files and folders. An analogy might be protecting a child from accessing adult-only files. A common example is preventing guests from accessing system files that could cause a major error if accidentally modified or deleted.</p>
+
+<p>There are three permissions that can be set in Linux: read, write, and execute.</p>
+<ul>
+  <li>Read (abbreviated ‘r’) is the permission to read a file.</li>
+  <li>Write (abbreviated ‘w’) is the permission to edit a file.</li>
+  <li>Execute (abbreviated ‘x’) is the permission to run a file.
+Luckily, it is very easy to see the permissions of any file or folder in Linux by using the ‘ls’ command with the ‘-l’ flag, which means ‘long’: <code class="language-plaintext highlighter-rouge">ls -l</code></li>
+</ul>
+
+<p>If we do this, we’ll find a listing of files and their permissions. This will look like this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ip-10-10-248-165:~# ls -l
+total 28
+drwxr-xr-x 3 root root 4096 Dec 29 2020 Desktop
+drwxr-xr-x 2 root root 4096 Sep 10 2020 Downloads
+drwxr-xr-x 2 root root 4096 Oct 30 2020 Instructions
+drwxr-xr-x 2 root root 4096 Mar 18 19:35 Pictures
+drwxr-xr-x 3 root root 4096 Aug 16 2020 Postman
+drwxr-xr-x 2 root root 4096 Sep 3 12:22 Scripts
+drwxr-xr-t 2 root root 4096 Aug 13 2020 thinclient_drives
+lrwxrwxrwx 1 root root 19 Mar 18 17:52 Tools -&gt; /root/Desktop/Tools
+root@ip-10-10-248-165:~#
+</code></pre></div></div>
+<p>The permissions are on in the first column on the left, represented by ‘drwxrwxrwx’. Here, the first letter ‘d’ stands for ‘directory’. A dash ‘-‘ signifies a file, and an ‘l’ represents a link file. The next nine entries are three sets of a repeating pattern ‘rwx’, which stands for the ‘read, write, execute’ permissions of a specific party.</p>
+
+<p>The three sets are:</p>
+<ol>
+  <li>The file owner</li>
+  <li>The group that the file is associated with</li>
+  <li>All other users</li>
+</ol>
+
+<p>A dash ‘-‘ means that no permission has been assigned, and a letter (r, w, or x) means that the owner, group, or other users have permission to complete that function. For example: <code class="language-plaintext highlighter-rouge">drwxr-xr–</code> means that it is a directory; the owner has permission to read, write, and execute, the group has permission to read and execute (but not to write), and all other users have permission to read but not write or execute.</p>
+
+<p>Second column: how many links there are to the file.
+Third column: the owner of the file.
+Fourth column: the group owner of the file.
+Fifth column: the size of the file, in bytes.
+Sixth column: the last data and time that the file was modified.
+Seventh column: filename or directory name.</p>
+
+<h3 id="groups-and-users">Groups and Users</h3>
+<p>We’ve mentioned groups, but what are they? The idea of a group is creating a set of users that have shared permissions. It gives us one more way to control permissions for files and directories.</p>
+
+<h3 id="switching-between-users">Switching Between Users</h3>
+<p>Linux has a special command that enables switching between users: su. The su command has different options. A common one uses the ‘-l’ flag, which allows you to inherit more of the permissions of the users you are using su to switch to.</p>
+
+<p><strong>Question 1:</strong> On the deployable machine, who is the owner of “important”?
+<strong>Walkthrough:</strong> To complete this question, we need to be connected to the ‘linuxfundpt2’ machine via SSH (## Task 2, above). Next, we run the ‘ls -l’ command to give us a list of files and folders in the working directory. We can see that the top line corresponds with the file ‘important’ (the names of the files and folders are in the rightmost column).
+The third column contains the entry for the file’s owner.
+<strong>Answer:</strong> user2</p>
+
+<p><strong>Question 2:</strong> What would the command be to switch to the user “user2”?
+<strong>Walkthrough:</strong> We use the ‘su‘ command to switch users, using the following syntax <code class="language-plaintext highlighter-rouge">su &lt;username&gt;</code>. For example, if we want to switch to a user named ‘greg’, we would use the command <code class="language-plaintext highlighter-rouge">su greg</code>. Take this example and apply it to user ‘user2’.
+<strong>Answer:</strong> <code class="language-plaintext highlighter-rouge">su user2</code></p>
+
+<p><strong>Question 3:</strong> Now switch to this user “user2” using the password “user2”
+<strong>Walkthrough:</strong> Use the command from the last question to switch users. You will be prompted to enter the password for user2 (which is also user2). If successful, you should see username ‘user2’ reflected in the command prompt:
+<strong>Answer:</strong> No answer needed</p>
+
+<p><strong>Question 4:</strong> Output the contents of “important”, what is the flag?
+<strong>Walkthrough:</strong> Let’s use the cat command to read the file named ‘important’, using <code class="language-plaintext highlighter-rouge">cat (filename)</code>
+<strong>Answer:</strong> <code class="language-plaintext highlighter-rouge">THM{SU_USER2}</code></p>
+
+<p>Note that we didn’t actually need to login as user2 in order to read ‘important’. When we performed the ‘ls -l’ command earlier, we saw that all users have permission to read ‘important’.</p>
+
+<h2 id="task-6--common-directories">Task 6 – Common Directories</h2>
+
+<p>This Task covers some of the most important and common directories in Linux. Before we look at these directories, it’s important to note that we can always get to the root directory with the command <code class="language-plaintext highlighter-rouge">cd /</code>. Contrast this with the command that we can use to travel to our user’s home directory: <code class="language-plaintext highlighter-rouge">cd ~</code></p>
+
+<p>The directories that we are covering in this Task can be found in the root directory, so feel free to use the ‘cd /’ command to travel to the root directory and investigate them for yourself.</p>
+
+<p>We’ll be covering the following directories: /etc, /var, /root, and /tmp.</p>
+<ul>
+  <li>Directory /etc: The /etc directory contains system configuration files that are used by the operating system. Examples include the sudoer file, which contains a list of users having ‘sudo’ (super user do) permissions, as well as user password files.</li>
+  <li>Directory /var: The /var directory contains variable data such as logs or databases. The idea is that the /var folder contains information that is frequently accessed or edited.</li>
+  <li>Directory /root:The /root folder is the home directory for the root user.</li>
+  <li>Directory /tmp: You may have guessed this: the /tmp directory is used to store temporary files. The contents of the /tmp folder are deleted when the computer is restarted, similar to a computer’s memory (RAM).</li>
+</ul>
+
+<p><strong>Question 1:</strong> Read me!
+<strong>Answer:</strong> No answer needed</p>
+
+<p><strong>Question 2:</strong> What is the directory path that would we expect logs to be stored in?
+<strong>Walkthrough:</strong> Based on the description, we should expect logs to be stored somewhere in the /var directory. If we list the contents of the directory, we can take a good guess. Take a look at each option. Which of these would be most likely to contain logs?
+<strong>Answer:</strong> <code class="language-plaintext highlighter-rouge">/var/log</code></p>
+
+<p><strong>Question 3:</strong> What root directory is similar to how RAM on a computer works?
+<strong>Walkthrough:</strong> This is mentioned in the write-up. As a tip, which directory is used to temporarily store data and clears out the data during restart?
+<strong>Answer:</strong> <code class="language-plaintext highlighter-rouge">/tmp</code></p>
+
+<p><strong>Question 4:</strong> Name the home directory of the root user
+<strong>Walkthrough:</strong> This is one of the common directories mentioned in the write-up.
+<strong>Answer:</strong>  <code class="language-plaintext highlighter-rouge">/root</code></p>
+
+<p><strong>Question 5:</strong> Now apply your learning and navigate through these directories on the deployed Linux machine.
+<strong>Walkthrough:</strong> Try to navigate into each one, perform ‘ls’ commands, and guess what the different files and folders do. This is a great way to strengthen your command line skills; don’t forget to use ‘cd /’ to navigate to the root directory and ‘cd ~’ to go to the home directory.
+<strong>Answer:</strong> Paste and hide answer</p>
+
+<h2 id="task-7--conclusions-and-summaries">Task 7 – Conclusions and Summaries</h2>
+
+<p>If you’re new to Linux, this room is definitely worth going through again. I’d also recommend continuing through the third room in the series and then doing the whole series again. Some of this material may have seemed difficult the first time through but it will quickly become easier.</p>
+
+<p><strong>Question 1:</strong> Proceed to the next task to continue your learning
+<strong>Answer:</strong> No answer needed</p>
+
+<h2 id="task-8--linux-fundamentals-pt-3">Task 8 – Linux Fundamentals Pt. 3</h2>
+
+<p>Let’s continue our Linux journey with the third (and final) part of the Linux Fundamentals series! Here’s the link: https://tryhackme.com/room/linuxfundamentalspart3</p>
+
+<p><strong>Question 1:</strong> Terminate the machine from task 2!
+<strong>Answer:</strong> No answer needed</p>
+
+<p><strong>Question 2:</strong> Join Linux Fundamentals Part 3!
+<strong>Answer:</strong>  No answer needed</p>
+:ET

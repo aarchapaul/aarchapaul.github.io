@@ -1,0 +1,181 @@
+I"`K<h2 id="introduction">Introduction</h2>
+
+<p>This room covers some essential Linux basics. We learn what Linux is, how to spin up a Linux virtual machine (VM) in THM, and a number of essential commands and operators. By going through this room, you’ll learn how to navigate the Linux file structure, search for files, read the contents of a file, and search inside a file’s contents.</p>
+
+<p>This TryHackMe Room is the first in a three-part introductory series on Linux. This room can be found at: https://tryhackme.com/room/linuxfundamentalspart1</p>
+
+<h2 id="task-1--introduction">Task 1 – Introduction</h2>
+
+<p>Most people are familiar with operating systems like Windows and MacOS. Like these, Linux is an operating system. You may be unaware that Linux is actually very common. A prominent example is Android OS, which uses the Linux kernel. Linux is also used in cars, servers, supercomputers, and many other applications.</p>
+
+<p><strong>Question 1</strong>: Let’s get started!
+<strong>Walkthrough</strong>: This question is a freebie.
+<strong>Answer:</strong>  No answer needed</p>
+
+<h2 id="task-2--a-bit-of-background-on-linux">Task 2 – A Bit of Background on Linux</h2>
+
+<p>We’ve seen that even though Linux isn’t very at common for home use, it is popular for many other applications. Even though we often speak of Linux as being a single operating system, Linux is actually a family of operating systems that are all based on the Linux kernel.</p>
+
+<p>There are many variants of Linux because it’s open source. That means that anyone can use, change, or distribute the software for free. Different versions of Linux are often created to solve specific problems or meet specific demands.</p>
+
+<p><strong>Question 1:</strong> Research: What year was the first release of a Linux operating system?
+<strong>Walkthrough:</strong> This is a research question, so I won’t give you the answer here. It’s very easy to find out. Just google it.</p>
+
+<h2 id="task-3--interacting-with-your-first-linux-machine">Task 3 – Interacting With Your First Linux Machine</h2>
+
+<p>One of the best things about TryHackMe is the ability to spin up a virtual machine in your browser. A virtual machine is an emulation of an actual computer, and allows us to do basically anything that we could do with a dedicated computer. Virtual machines allow us to work with different operating systems and make use of tools that we don’t normally have access to on our computer’s operating system. This means that you don’t need a dedicated machine in order to learn a different OS.</p>
+
+<p>To complete this task, you’ll need to click the green ‘Start Machine’ button at the top of this Task (Task 3). Have a little patience: it will take some time for the machine to begin initializing and a few minutes for it to be ready. Once the machine is active, you’ll see a card at the top of the room that tells you how much time you have left as well as the IP address of the machine.</p>
+
+<p>There are actually two deployable machines in this room: the THM AttackBox, which can be deployed from a blue button at the very top of the room, and the linuxfundpt1 machine, which is deployed from the top of Task 3.</p>
+
+<p>For this Room, we will be using the linuxfundpt1 machine, which will bring you right into a command prompt (rather than the AttackBox which will open a GUI). In later lessons we’ll actually start up two machines at once: one will be the attacker and the other the defender.</p>
+
+<p><strong>Question 1:</strong> I’ve deployed my first Linux machine! 
+<strong>Walkthrough:</strong> Make sure your have the right machine deployed. At the bottom of the screen, you’ll see tabs corresponding to the machine. In the above example we have activated both machines, so we can use the corresponding tab to access the machine we want.
+<strong>Answer:</strong> No answer needed</p>
+
+<h2 id="task-4--running-your-first-few-commands">Task 4 – Running Your First Few Commands</h2>
+
+<p>While most flavors of Linux have a graphical user interface (GUI), the command line is really where a lot of the action is. Command lines might seem intimidating, but they allow us to perform functions that would actually be more difficult or time consuming than using a GUI.</p>
+
+<p>Windows is actually a great example of the power of the command line; since the GUI tends to change with every new version of Windows, you’d need to know exactly how to navigate through the different menus to achieve your objective. Commands, however, rarely change, so if you know the command you need to use, you can generally execute a task much faster via the command line than you can if you need to navigate through a lot of windows.</p>
+
+<p>In the last task, we spun up a virtual machine (VM) called linuxfundpt1. This VM features a command line interface which is also called a terminal.</p>
+
+<p>In this task, we learn two simple but important commands: echo and whoami.</p>
+
+<ul>
+  <li>echo – will return any text that we provide. For example, the command ‘echo hello!’ will return ‘hello!’. This might seem trivial, but it’s used in a lot of code to provide information back to the user – like progress updates.</li>
+  <li>whoami – will tell us what user we are currently logged in as.</li>
+</ul>
+
+<p><strong>Question 1:</strong> If we wanted to output the text “TryHackMe“, what would our command be?
+<strong>Walkthrough:</strong> We’ll be using echo command.
+<strong>Answer:</strong> <code class="language-plaintext highlighter-rouge">echo TryHackMe</code></p>
+
+<p><strong>Question 2:</strong> What is the username of who you’re logged in as on your deployed Linux machine?
+<strong>Walkthrough:</strong> For this question, we’ll need to use the whoami command, which should return the answer. Just type <code class="language-plaintext highlighter-rouge">whoami</code> into the command line interface (CLI).
+<strong>Answer:</strong> tryhackme</p>
+
+<h2 id="task-5--interacting-with-the-filesystem">Task 5- Interacting With the Filesystem!</h2>
+
+<p>You’re probably very familiar with navigating the filesystem on Windows or MacOS using the GUI to navigate a series of windows. We can create files or folders and organize the system at will.</p>
+
+<p>These types of functions are important in Linux as well, and we can get familiar enough with the command line to make it just as easy as it is in a GUI. In this Task, we’ll learn four new, super-important commands: ls, cd, cat, and pwd.</p>
+
+<ul>
+  <li>ls – lists the contents of the current directory. Tip: you can list the contents of any directory by using ‘ls /directory/’.</li>
+  <li>cd – changes the current directory. Tip: you can navigate back ‘up’ through the filesystem using ‘cd ..’ or back to the home directory using ‘cd ~’.</li>
+  <li>cat – outputs the contents of a file.</li>
+  <li>pwd – prints the current (working) directory.</li>
+</ul>
+
+<p><strong>Question 1:</strong> On the Linux machine that you deploy, how many folders are there?
+<strong>Walkthrough:</strong> If you’ve been experimenting with navigating through the filesystem, use the command <code class="language-plaintext highlighter-rouge">cd ~</code> to get back to the home directory. Type in the <code class="language-plaintext highlighter-rouge">ls</code> command. You should see a number of folders, which are highlighted in blue.
+<strong>Answer:</strong>  4</p>
+
+<p><strong>Question 2</strong> :Which directory contains a file?
+<strong>Walkthrough:</strong> There are four directories, as we saw in the last question. We could navigate into each directory using <code class="language-plaintext highlighter-rouge">cd &lt;directory&gt;</code> and then use <code class="language-plaintext highlighter-rouge">ls</code> to search each one, but this takes more work than necessary. Instead, we can use the ls command from the home directory to search each folder. To search folder1, just type <code class="language-plaintext highlighter-rouge">ls folder1</code>. For each subsequent folder, you can just use the ‘up’ arrow on your keyboard and the previous command will show up in the terminal. Now all you need to do is change ‘folder1’ to ‘folder2’. You should quickly be able to identify the directory containing a file with this technique. We’re looking for a file named <code class="language-plaintext highlighter-rouge">note.txt</code>. 
+<strong>Answer:</strong> folder4</p>
+
+<p><strong>Question 3:</strong> What is the contents of this file? 
+<strong>Walkthrough:</strong> We’ll need to use the <code class="language-plaintext highlighter-rouge">cat</code> command to answer this question. This can be done by either navigating into the directory using <code class="language-plaintext highlighter-rouge">cd &lt;directory&gt;</code> and executing <code class="language-plaintext highlighter-rouge">cat &lt;filename&gt;</code> or from the home directory using <code class="language-plaintext highlighter-rouge">cat &lt;directory&gt;/&lt;filename&gt;</code>. 
+<strong>Answer:</strong> Hello World!</p>
+
+<p><strong>Question 4:</strong> Use the cd command to navigate to this file and find out the new current working directory. What is the path? 
+<strong>Walkthrough:</strong> First, use <code class="language-plaintext highlighter-rouge">cd &lt;directory&gt;</code> to navigate into the directory containing the <code class="language-plaintext highlighter-rouge">note.txt</code> file. Next, review the four commands to identify the one that will tell us the current working directory. This command is super important! It allows us to check that we are in the directory we want to be in, at any given time. From inside the directory, use this three letter command to print the working directory. 
+<strong>Answer:</strong> <code class="language-plaintext highlighter-rouge">/home/tryhackme/folder4</code></p>
+
+<h2 id="task-6--searching-for-files">Task 6 – Searching for Files</h2>
+
+<p>This Task introduces two new commands: find and grep.</p>
+<h3 id="using-find">Using find</h3>
+<p>Itallows us to search for files or directories that match specific search criteria. Two common options are -type and -name. For -type, we can use d for directories or f for files, for example: 
+    <code class="language-plaintext highlighter-rouge">find -type d</code>
+    <code class="language-plaintext highlighter-rouge">find -type f</code></p>
+
+<p>We can combine this with the -name option to search for files or directories that have a given character combination in their name. This is commonly done using asterisks to signify wildcards, for example:</p>
+
+<p><code class="language-plaintext highlighter-rouge">find -type f -name *myfile*</code></p>
+
+<p>Will search for files with ‘myfile’ somewhere in the name. The -name option can be used to find files of a certain type, i.e.<code class="language-plaintext highlighter-rouge">find -name *.txt</code>  which will search for all .txt files. We can also specify directories to search; to search everything in the file structure, we can tell find to search the whole root directory using <code class="language-plaintext highlighter-rouge">find / -type f -name *myfile*</code>. This will search the entire filesystem for files with ‘myfile’ somewhere in their name.</p>
+
+<h3 id="using-grep">Using grep</h3>
+
+<p>While the <code class="language-plaintext highlighter-rouge">find</code> command allows us to search for files, <code class="language-plaintext highlighter-rouge">grep</code> allows us to search the contents of files. This can be really useful when trying to search a large file. With grep, we need to pass it the argument we are searching for as well as the file that we want it to search.</p>
+
+<p>For example if we want to search a file called mycatfile.txt for the term ‘kitten’, we would use <code class="language-plaintext highlighter-rouge">grep “kitten” mycatfile.txt</code>.</p>
+
+<p><strong>Question 1:</strong> Use grep on “access.log” to find the flag that has a prefix of “THM”. What is the flag? 
+<strong>Walkthrough:</strong> Try to guess the solution before going further. Use the following command in the terminal <code class="language-plaintext highlighter-rouge">grep “THM” access.log</code>. We will see a bunch of content but the flag we are looking for has the format <code class="language-plaintext highlighter-rouge">THM{FLAG}</code>. 
+<strong>Answer:</strong> <code class="language-plaintext highlighter-rouge">THM{ACCESS}</code></p>
+
+<h2 id="task-7--an-introduction-to-shell-operators">Task 7 – An Introduction to Shell Operators</h2>
+
+<p>So far, we have covered a number of important Linux commands.</p>
+
+<p>In addition to commands, Linux also supports a number of operators that allow us to do more with the commands. Operators are identified by a symbol rather than a letter-based command. We’ll cover four different operators in this task: &amp;, &amp;&amp;, &gt;, and ».</p>
+<ul>
+  <li>The &amp; Operator: The &amp; operator is a useful command that allows us to run commands in the background. Sometimes, we want to complete a task that will take a while but we don’t want our terminal to stay frozen while the command is being executed. This is where the &amp; operator comes in. One example is copying a large file; by using the &amp; operator, we can continue to use our terminal while the file is being copied in the background.</li>
+  <li>The &amp;&amp; Operator: This operator will allow us to execute multiple commands using a single line of code. You can use this to string together any number of commands, not just two. Note that the commands are executed sequentially, beginning with the first and ending with the last. As a simple example, we can navigate to the home directory using <code class="language-plaintext highlighter-rouge">cd ~</code>. From there, let’s navigate back to folder4, list the contents of folder 4, and output the contents of note.txt using a single line on the terminal <code class="language-plaintext highlighter-rouge">cd folder4 &amp;&amp; ls &amp;&amp; cat note.txt</code>. This will change our working directory and output: 
+  <code class="language-plaintext highlighter-rouge">note.txt</code>
+  <code class="language-plaintext highlighter-rouge">Hello World!</code></li>
+  <li>The &gt; Operator: This operator allows us to redirect the output of a command. This is actually incredibly useful when performing a variety of scans for pentesting, as it allows us to output a scan to a file that we can refer back to or search using the grep command. Let’s see a simple example. Navigate back to the home directory using <code class="language-plaintext highlighter-rouge">cd ~</code> and use the find command to identify .txt files. Instead of outputting to the command line, we’ll use the &gt; operator to output to a file ‘my_txt_files’ that will be created on the spot: <code class="language-plaintext highlighter-rouge">find -name *.txt &gt; my_txt_files</code></li>
+</ul>
+
+<p>This example is trivial because there will only be one entry, but what if we had a lot of entries? By having our command output in the form of a file, it makes it much more searchable and readable - especially as we’ll learn new commands (other than ‘cat’) that make reading files much easier on Linux.</p>
+
+<p>Note that the &gt; operator re-writes the file that we output to, deleting the current contents in the process.</p>
+
+<p>The &gt; operator can also be used in combination with the echo command in order to create a new file with whatever content we want, e.g.:</p>
+
+<p><code class="language-plaintext highlighter-rouge">echo mynewcontent &gt; mynewfile</code></p>
+
+<p>If we were to cat ‘mynewfile’, we would see that the contents of mynewfile is just ‘mynewcontent’.
+The » Operator</p>
+
+<p>This operator is just like the &gt; operator except it adds the output to the end of a file rather than re-writing the whole file. This is useful because we don’t always want to make a new file or re-write an existing one.</p>
+
+<p><strong>Question 1:</strong> If we wanted to run a command in the background, what operator would we want to use? 
+<strong>Walkthrough:</strong> This is the first command that we learned in this Task. 
+<strong>Answer:</strong>  &amp;</p>
+
+<p><strong>Question 2:</strong> If I wanted to replace the contents of a file named “passwords” with the word “password123”, what would my command be? 
+<strong>Walkthrough:</strong> For this command, we will use the &gt; operator in combination with the echo command to rewrite the file named ‘passwords’. The format is: <code class="language-plaintext highlighter-rouge">echo (new password) &gt; (file) 
+**Answer:** </code>echo password123 &gt; passwords`</p>
+
+<p><strong>Question 3:</strong> Now if I wanted to add “tryhackme” to this file named “passwords” but also keep “passwords123”, what would my command be? 
+<strong>Walkthrough:</strong> Remember, the &gt; operator will overwrite any file contents while the » operator will simply add the new content to the end of the file. We’ll need the use the » operator in much the same way as we used the &gt; operator in the last question. 
+<strong>Answer:</strong> <code class="language-plaintext highlighter-rouge">echo tryhackme &gt;&gt; passwords</code></p>
+
+<p><strong>Question 4:</strong> Now use the deployed Linux machine to put these into practice 
+<strong>Walkthrough:</strong> Have fun experimenting with Linux commands and operators! 
+<strong>Answer:</strong> No answer needed</p>
+
+<h2 id="task-8--conclusions--summaries">Task 8 – Conclusions &amp; Summaries</h2>
+
+<p>We’ve covered an overview of Linux and the command line interface (CLI), and have learned a bunch of new commands and operators. They may seem basic, but they are absolutely essential for mastery of Linux, and we will see them over and over again.</p>
+
+<p>The commands we’ve learned in this Room are: echo, whoami, ls, cd, cat, and pwd. And the operators are: &amp;, &amp;&amp;, &gt;, and ».</p>
+
+<p><strong>Question 1:</strong> I’ll have a play around! 
+<strong>Walkthrough:</strong> Experiment with the different commands and operators in the command line. 
+<strong>Answer:</strong> No answer needed</p>
+
+<h2 id="task-9--linux-fundamentals-pt-2">Task 9 – Linux Fundamentals Pt. 2</h2>
+
+<p>This Room is the first in a series of 3. The journey continues with Linux Fundamentals Pt. 2.</p>
+
+<p><strong>Question 1:</strong> Terminate the machine deployed in this room from task 3. 
+<strong>Walkthrough:</strong> The machine can be terminated using the button with the power logo at the bottom of the screen. 
+<strong>Answer:</strong>  No answer needed</p>
+
+<p><strong>Question 2:</strong> Join Linux Fundamentals Pt. 2! 
+<strong>Walkthrough:</strong> Join the next room to continue your Linux journey. 
+<strong>Answer:</strong> No answer needed</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This room provides a great introduction to Linux and some important commands and operators, all of which are common and which you’ll see repeatedly. These skills are relatively easy to learn with practice and THM makes it as fun and easy as possible by allowing us to launch a VM right in the Room.</p>
+:ET
