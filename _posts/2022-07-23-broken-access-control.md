@@ -11,7 +11,7 @@ tags:
  - reconnaisance 
  - vuln 
  - OWASP top 10 
----  
+---
 # Broken Access Control
 Broken Access Control has become the most common web application vulnerability according to OWASP Top 10 list in 2021. Hence it is important to not only understand this type of vulnerability but also how to prevent it.
 
