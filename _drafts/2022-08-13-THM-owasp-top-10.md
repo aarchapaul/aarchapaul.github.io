@@ -1,15 +1,15 @@
 ---
 layout: post
-title: TryHackMe writeup - OWASP Top 10
-date: 2021-11-25 15:00:18
-summary: This is my writeup for the TryHackMe challenge OWASP Top 10
+title: 
+date: 2022-08-13 21:13:45 +0530
+author: Aarcha Paul
+summary: 
 categories: TryHackMe
-thumbnail: 
+thumbnail: jekyll
 tags:
  - TryHackMe
  - writeup
 ---
-
 This is the Write-Up about OWASP Top 10 Room in TryHackMe:
 
 ## Introduction
