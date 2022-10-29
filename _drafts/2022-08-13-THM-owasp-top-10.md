@@ -13,7 +13,6 @@ tags:
 This is the Write-Up about OWASP Top 10 Room in TryHackMe:
 
 ## Introduction
-
 Learn one of the OWASP vulnerabilities every day for 10 days in a row. A new task will be revealed every day, where each task will be independent from the previous one. These challenges will cover each OWASP topic:
 
 - Day 1) Injection
