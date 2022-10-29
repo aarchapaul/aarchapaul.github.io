@@ -19,11 +19,11 @@ Today I am trying the TryHackMe CTF room called Gallery. It is a free room and i
 **Walkthrough:** This can be found out with an nmap scan.
 `nmap -sC -sV -oN initial.txt 10.10.60.88`
 ![gallery-nmap](/assets/THM-gallery/gallery-nmap.png)
-We can see that ports 80 and 8080 are open.  
+We can see that ports 80 and 8080 are open.    
 **Answer:** 2
 
 **Question 2:** What's the name of the CMS?  
-**Walkthrough:** This one was a major rabbit hole and took me quite some time to figure out. The nmap scan shows the name but I thought it was just the website name.  
+**Walkthrough:** This one was a major rabbit hole and took me quite some time to figure out. The nmap scan shows the name but I thought it was just the website name.    
 **Answer:** Simple Image Gallery
 
 **Question 3:** What's the hash password of the admin user?  
