@@ -10,6 +10,8 @@ tags:
  - regex
  - Regular Expressions
 ---
+# Regex commands for beginners
+
 Regular expressions, also known as regex, are a powerful tool for working with text. They allow you to search for, match, and manipulate specific patterns of characters within a body of text.
 
 Here are a few basic regex commands that every beginner should know:
