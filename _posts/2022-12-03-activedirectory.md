@@ -1,0 +1,27 @@
+---
+layout: post
+title: 
+date: 2022-12-03 13:11:28 +0530
+author: Aarcha Paul
+summary: 
+categories: TryHackMe
+thumbnail: ad
+tags:
+ - windows
+---
+
+# Active Directory (AD) for beginners
+
+Welcome to my blog post on Active Directory (AD) for beginners!
+
+Active Directory is a directory service that is used to store and manage the data and resources of an organization. It is a central repository for all the data and information about the users, computers, and other resources in an organization.
+
+One of the main purposes of Active Directory is to provide a single sign-on experience for users. This means that users only need to enter their login credentials once in order to access all of the resources that they are authorized to use. This makes it easier for users to access the resources they need and helps to improve productivity.
+
+Another important function of Active Directory is to provide security and access controls. It allows administrators to set up permissions and access controls for each user and resource, which helps to ensure that only authorized users have access to sensitive information.
+
+Active Directory is also used to manage and update resources such as user accounts, computers, and other devices. This can include tasks such as adding new users, resetting passwords, and installing software updates.
+
+In order to use Active Directory, an organization needs to set up a domain controller. This is a server that stores the Active Directory database and manages access to it. The domain controller authenticates users and grants them access to the resources they are authorized to use.
+
+There are many benefits to using Active Directory, including improved security, easier resource management, and a better user experience. If you are new to Active Directory, I hope this blog post has given you a good introduction to the basics. 
