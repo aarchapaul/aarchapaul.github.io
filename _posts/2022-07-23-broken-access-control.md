@@ -1,14 +1,14 @@
 ---
-layout:     post
-title:      Broken Access Control
-date:       2022-07-23 20:26:17 +0530
-summary:    A quick introduction to Broken Access Control vulnerability.
+layout: post
+title: Broken Access Control
+date: 2022-07-23 20:26:17 +0530
+summary: A quick introduction to Broken Access Control vulnerability.
 categories: 
 thumbnail: jekyll
 tags:
- - enumeration
- - OWASP top 10 
- - reconnaisance
+  - enumeration
+  - OWASP
+  - reconnaisance
 ---
 
 Broken Access Control has become the most common web application vulnerability according to OWASP Top 10 list in 2021. Hence it is important to not only understand this type of vulnerability but also how to prevent it.

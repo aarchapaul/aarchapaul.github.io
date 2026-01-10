@@ -4,7 +4,7 @@ title: A Quick Introduction to Powershell Commands
 date: 2022-09-17 11:21:40 +0530
 author: Aarcha Paul
 summary: 
-categories: TryHackMe
+categories: 
 thumbnail: windows
 tags:
  - Windows

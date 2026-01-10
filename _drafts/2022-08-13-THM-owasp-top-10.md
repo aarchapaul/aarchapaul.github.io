@@ -7,8 +7,8 @@ summary:
 categories: TryHackMe
 thumbnail: jekyll
 tags:
- - TryHackMe
- - writeup
+  - TryHackMe
+  - writeup
 ---
 This is the Write-Up about OWASP Top 10 Room in TryHackMe:
 
