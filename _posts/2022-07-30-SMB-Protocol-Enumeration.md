@@ -4,8 +4,8 @@ title: SMB Protocol Enumeration
 date: 2022-07-30 04:58:27 +0530
 author: Aarcha Paul
 summary: 
-categories: 
-thumbnail: jekyll
+categories: cheatsheet
+thumbnail: 
 tags:
  - enumeration
  - reconnaisance

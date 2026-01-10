@@ -3,7 +3,7 @@ layout: post
 title: Broken Access Control
 date: 2022-07-23 20:26:17 +0530
 summary: A quick introduction to Broken Access Control vulnerability.
-categories: 
+categories: OWASP-top-10
 thumbnail: jekyll
 tags:
   - enumeration

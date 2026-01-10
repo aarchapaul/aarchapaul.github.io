@@ -4,7 +4,7 @@ title: Windows Commands cheatsheet
 date: 2023-01-07 11:31:08 +0530
 author: Aarcha Paul
 summary: 
-categories: 
+categories: cheatsheet
 thumbnail: windows
 tags:
  - windows
@@ -28,17 +28,17 @@ tags:
       <tr>
          <td>1.</td>
          <td>dir</td>
-         <td>This command allows you to view the files and directories in a directory. By using the `/p` option, you can view the files and directories one page at a time, which is useful for large directories.</td>
+         <td>View the files and directories in a directory. By using the `/p` option, you can view the files and directories one page at a time, which is useful for large directories.</td>
       </tr>
       <tr>
          <td>2.</td>
          <td>cd</td>
-         <td>The `cd` command allows you to change your current directory. For example, if you want to switch to the Documents directory, you would enter `cd Documents` into the command prompt.</td>
+         <td>Change your current directory. E.g. to switch to the Documents directory, enter `cd Documents`</td>
       </tr>
       <tr>
          <td>3.</td>
          <td>copy</td>
-         <td>This command allows you to copy files from one location to another. For example, if you want to copy a file named `file.txt` from the `C:\Users\User\Desktop` directory to the `C:\Users\User\Documents` directory, you would enter `copy C:\Users\User\Desktop\file.txt C:\Users\User\Documents` into the command prompt. </td>
+         <td>Used to copy files from one location to another. E.g. if you want to copy a file named `file.txt` from the `C:\Users\User\Desktop` directory to the `C:\Users\User\Documents` directory, you would enter `copy C:\Users\User\Desktop\file.txt C:\Users\User\Documents` into the command prompt. </td>
       </tr>
       <tr>
          <td>4.</td>
@@ -48,22 +48,22 @@ tags:
        <tr>
          <td>5.</td>
          <td>ping</td>
-         <td>test the connection between your computer and another device on a network. For example, if you want to ping a website, you can enter `ping www.website.com` into the command prompt. This command is useful for troubleshooting network issues.</td>
+         <td>Test the connection between your computer and another device on a network. For example, if you want to ping a website, you can enter `ping www.website.com` into the command prompt. This command is useful for troubleshooting network issues.</td>
       </tr>
        <tr>
          <td>6.</td>
          <td>ipconfig</td>
-         <td>This command displays your computer's network configuration, including its IP address, subnet mask, and default gateway. The `/all` option displays even more information about your network configuration such as DNS server, IPv6 address and MAC address. </td>
+         <td>Displays your computer's network configuration, including its IP address, subnet mask, and default gateway. The `/all` option displays even more information about your network configuration such as DNS server, IPv6 address and MAC address. </td>
       </tr>
        <tr>
          <td>7.</td>
          <td>findstr</td>
-         <td>Search for a specific string of text within a file or set of files. For example, if you want to search for the word `error` in all the .txt files in the `C:\Users\User\Desktop` directory, you would enter `findstr error C:\Users\User\Desktop*.txt` into the command prompt.</td>
+         <td>Search for a specific string of text within a file or set of files. E.g. if you want to search for the word `error` in all the .txt files in the `C:\Users\User\Desktop` directory, you would enter `findstr error C:\Users\User\Desktop*.txt` into the command prompt.</td>
       </tr>
        <tr>
          <td>8.</td>
          <td>`ipconfig /release` and `ipconfig /renew`</td>
-         <td>These commands allow you to release and renew your IP address, respectively. This can be useful if you're having connectivity issues and need to refresh your IP address. These will reach out to the DHCP server and gett you a fresh new address and refresh every single interface on your computer. If you dont want that, specify the interface after command eg. `ipconfig /release "Wi-Fi"`. </td>
+         <td>Helps release and renew your IP address, respectively. Useful if you're having connectivity issues and need to refresh your IP address. These will reach out to the DHCP server and get you a fresh new address and refresh every single interface on your computer. If you dont want that, specify the interface after command eg. `ipconfig /release "Wi-Fi"`. </td>
       </tr>
        <tr>
          <td>9.</td>
@@ -73,7 +73,7 @@ tags:
        <tr>
          <td>10.</td>
          <td>clip</td>
-         <td>This is very handy to copy the output of a command to your clipboard. For example, `ipconfig /displaydns | clip` will copy the output of the DNS resolver cache to your clipboard, which you can paste into your favorite text editor.</td>
+         <td>This is very handy to copy the output of a command to your clipboard. E.g. `ipconfig /displaydns | clip` will copy the output of the DNS resolver cache to your clipboard, which you can paste into your favorite text editor.</td>
       </tr>
        <tr>
          <td>11.</td>
@@ -88,12 +88,12 @@ tags:
        <tr>
          <td>13.</td>
          <td>getmac /v</td>
-         <td>This command displays your computer's MAC address and other network-related information.</td>
+         <td>Displays your computer's MAC address and other network-related information.</td>
       </tr>
        <tr>
          <td>14.</td>
          <td>powercfg /energy</td>
-         <td>This command generates a report that shows you how to improve your computer's energy efficiency.</td>
+         <td>Generates a report that shows you how to improve your computer's energy efficiency.</td>
       </tr>
        <tr>
          <td>15.</td>
@@ -103,37 +103,37 @@ tags:
        <tr>
          <td>16.</td>
          <td>assoc</td>
-         <td>The assoc command displays or modifies the file associations for a particular file extension. For example, if the default app for opening mp4 files in your system is Windows Media Player, you can change it to VLC Media player by using the command `assoc .mp4=VLC.vlc`</td>
+         <td>Displays or modifies the file associations for a particular file extension. E.g. if the default app for opening mp4 files in your system is Windows Media Player, you can change it to VLC Media player by using the command `assoc .mp4=VLC.vlc`</td>
       </tr>
         <tr>
          <td>17.</td>
          <td>`chkdsk /f` and `chkdsk /r`</td>
-         <td>These commands check your computer's hard drive for errors and attempt to fix them. The `/f` option checks for and fixes errors that can be fixed without restarting your computer, while the `/r` option checks for and fixes errors that can only be fixed by restarting your computer.</td>
+         <td>Check your computer's hard drive for errors and attempt to fix them. The `/f` option checks for and fixes errors that can be fixed without restarting your computer, while the `/r` option checks for and fixes errors that can only be fixed by restarting your computer.</td>
       </tr>
        <tr>
          <td>18.</td>
          <td>sfc /scannow</td>
-         <td>Scans all protected system files on your computer and replaces any that are corrupt or missing.</td>
+         <td>Scans all protected system files and replaces any that are corrupt or missing.</td>
       </tr>
        <tr>
          <td>19.</td>
          <td>`DISM /Online /Cleanup /CheckHealth`, `DISM /Online /Cleanup /ScanHealth`, and `DISM /Online /Cleanup /RestoreHealth` </td>
-         <td>These commands are used to troubleshoot and repair problems with your Windows installation. The `CheckHealth` command checks the health of your system, the `ScanHealth` command scans for corruption and attempts to fix any issues it finds, and the `RestoreHealth` command restores the health of your system by repairing any issues it finds.</td>
+         <td>Used to troubleshoot and repair problems with your Windows installation. The `CheckHealth` command checks the health of your system, the `ScanHealth` command scans for corruption and attempts to fix any issues it finds, and the `RestoreHealth` command restores the health of your system by repairing any issues it finds.</td>
       </tr>
       <tr>
          <td>20.</td>
          <td>tasklist</td>
-         <td>Displays a list of all running processes on your computer</td>
+         <td>Displays list of all running processes</td>
       </tr>
        <tr>
          <td>21.</td>
          <td>taskkill</td>
-         <td>Allows you to terminate a specific process.</td>
+         <td>Terminate a specific process.</td>
       </tr>
        <tr>
          <td>22.</td>
          <td>netsh</td>
-         <td>is the older version of the `ipconfig` command. there are many possible variations to use netsh with.  Running this command `netshwlan show wlanreport` will create a report about your wireless network. `netsh interface show interface` will display information about your network interface. You can even turn off the Windows defender firewall witha single command `netsh advfirewall set allprofiles state off`. </td>
+         <td>is the older version of the `ipconfig` command. there are many possible variations to use netsh with.  Running this command `netshwlan show wlanreport` will create a report about your wireless network. `netsh interface show interface` will display information about your network interface. You can even turn off the Windows defender firewall with a single command `netsh advfirewall set allprofiles state off`. </td>
       </tr>
       <tr>
          <td>23.</td>
@@ -143,7 +143,7 @@ tags:
       <tr>
          <td>24.</td>
          <td>netstat</td>
-         <td>Will show the devices connected to you and the devices you are connecting to. It will also show which ports are open on your system by running the flag `-af`.</td>
+         <td>Shows the devices connected to you and the devices you are connecting to. It will also show which ports are open on your system by running the flag `-af`.</td>
       </tr>
       <tr>
          <td>25.</td>
