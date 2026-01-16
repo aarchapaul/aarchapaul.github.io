@@ -23,4 +23,4 @@ tags:
 `git fetch`: Fetches change from a remote repository, including new branches and commit.  
 `git checkout <branch-name>`: Switches to the specified branch  
 `git branch -r`: Lists all remote branches  
-`git branch -a`: Lists all local and remote branches  
+`git branch -a`: Lists all local and remote branches   
