@@ -26,3 +26,5 @@ tags:
 `git branch -a`: Lists all local and remote branches   
 `git remote -v`: check the remote url to which local repository is pointing  
 `git remote set-url origin <repository-url>.git`: edit remote repository url.  
+`git config --global user.name "Your Name"`: Configures your username for commits.  
+`git config --global user.email "youremail@example.com"`: Configures your email address  for commits.  
