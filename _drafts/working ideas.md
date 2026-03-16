@@ -1,5 +1,3 @@
-[[2024-06-08-Graphql]] - need more work
-[[2026-01-17-Nmap-cheatsheet]] - cleanup and consolidate
 subdomain takeover article
 substack writing research ; blogger 
 cron jobs in security and how automating backups is important??
